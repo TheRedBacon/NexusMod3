@@ -21,9 +21,9 @@ namespace NexusMod3.Items
             item.height = 35;   //gun image  height   //gun description
             item.useTime = 10;  //how fast 
             item.useAnimation = 60;
-			item.reuseDelay = 90;
+	    item.reuseDelay = 90;
             item.useStyle = 5;
-			item.noMelee = true; //so the item's animation doesn't do damage
+	    item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 1;
             item.value = 1000000;
             item.rare = 12;
@@ -37,7 +37,7 @@ namespace NexusMod3.Items
 		{
 			// Because of how the game works, player.itemAnimation will be 11, 7, and finally 3. (UseAmination - 1, then - useTime until less than 0.) 
 			// We can get the Clockwork Assault Riffle Effect by not consuming ammo when itemAnimation is lower than the first shot.
-			return !(player.itemAnimation < item.useAnimation - 2);
+			return !(player.itemAnimation < item.useAnimation - 5);
 		}
 
         public override void AddRecipes()  //How to craft this gun
