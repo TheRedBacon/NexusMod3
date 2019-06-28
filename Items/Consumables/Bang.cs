@@ -3,14 +3,14 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace smasher.Items
+namespace NexusMod3.Items
 {
     public class Bang : ModItem
     {
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("6 Shooter");
-            Tooltip.SetDefault("Yippie ki yay, mother****er");
+            Tooltip.SetDefault("Yippee ki-yay, mother****er");
         }
 		public override void SetDefaults()
         {
