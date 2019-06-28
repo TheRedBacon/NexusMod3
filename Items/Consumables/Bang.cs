@@ -14,7 +14,7 @@ namespace NexusMod3.Items
         }
 		public override void SetDefaults()
         {
-            item.damage = 30;  //gun damage
+            item.damage = 35;  //gun damage
             item.crit = 4;
             item.ranged = true;   //its a gun so set this to true
             item.width = 50;     //gun image width
