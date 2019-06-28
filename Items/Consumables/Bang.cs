@@ -9,7 +9,7 @@ namespace NexusMod3.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("6 Shooter");
+            DisplayName.SetDefault("Six Shooter");
             Tooltip.SetDefault("Yippee ki-yay, mother****er");
         }
 		public override void SetDefaults()
@@ -21,12 +21,12 @@ namespace NexusMod3.Items
             item.height = 35;   //gun image  height   //gun description
             item.useTime = 10;  //how fast 
             item.useAnimation = 60;
-	    item.reuseDelay = 90;
+	    item.reuseDelay = 75;
             item.useStyle = 5;
 	    item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 1;
-            item.value = 1000000;
-            item.rare = 12;
+            item.value = 10000;
+            item.rare = 5;
             item.UseSound = SoundID.Item11;
             item.autoReuse = false;
             item.shoot = 10; //idk why but all the guns in the vanilla source have this
@@ -43,11 +43,18 @@ namespace NexusMod3.Items
         public override void AddRecipes()  //How to craft this gun
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.DirtBlock, 1);   //you need 1 DirtBlock
-            recipe.AddTile(TileID.WorkBenches);   //at work bench
+            recipe.AddIngredient(ItemID.CobaltBar, 7);   //you need 1 DirtBlock
+			recipe.AddIngredient(ItemID.PhoenixBlaster, 1);
+            recipe.AddTile(TileID.MythrilAnvil);   //at work bench
             recipe.SetResult(this);
             recipe.AddRecipe();
 
+			ModRecipe recipe2 = new ModRecipe(mod);
+            recipe2.AddIngredient(ItemID.PalladiumBar, 7);   //you need 1 DirtBlock
+			recipe2.AddIngredient(ItemID.PhoenixBlaster, 1);
+            recipe2.AddTile(TileID.MythrilAnvil);   //at work bench
+            recipe2.SetResult(this);
+            recipe2.AddRecipe();
         }
     }
 }
